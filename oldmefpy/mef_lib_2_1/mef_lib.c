@@ -30,7 +30,10 @@
 #define EPSILON 0.0001
 #define FLOAT_EQUAL(x,y) ( ((y - EPSILON) < x) && (x <( y + EPSILON)) )
 
-
+#ifdef _WIN32
+	#define random rand
+	#define srandom srand
+#endif
 
 
 EXPORT
