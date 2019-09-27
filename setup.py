@@ -13,7 +13,7 @@ from Cython.Build import cythonize
 import numpy
 
 
-source_files = ["oldmefpy/oldmefpy.pyx"]
+source_files = ["oldmefpy/oldmefpy.pyx", "oldmefpy/mef_lib_2_1/mef_lib.c"]
 include_dirs = [numpy.get_include()]
 extensions = [Extension("oldmefpy.oldmefpy",
                         sources=source_files,
@@ -25,7 +25,7 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
-requirements = ['cython', 'numpy']
+requirements = ['numpy']
 
 
 setup(
@@ -52,10 +52,7 @@ setup(
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
         'Programming Language :: Cython',
-        "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.7',
     ],
     test_suite='tests',
     ext_modules=cythonize(extensions),
