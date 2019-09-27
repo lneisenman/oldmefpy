@@ -68,8 +68,8 @@
 	typedef unsigned short		ui2;
 	typedef int			si4;
 	typedef unsigned int		ui4;
-	typedef long int		si8;
-	typedef long unsigned int	ui8;
+	typedef long long		si8;
+	typedef unsigned long long	ui8;
 	typedef float			sf4;
 	typedef double			sf8;
 	typedef long double		sf16;
